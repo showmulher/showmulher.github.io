@@ -1,0 +1,429 @@
+/*-- 
+AUTHOR   : SimplePixel
+URL      : http://themeforest.net/user/SimplePixel
+TEMPLATE : Elito - Coming Soon Template
+VERSION  : 1.0
+
+TABLE OF CONTENTS
+1.0 BASIC STYLE
+2.0 TYPOGRAPHY
+3.0 FORMS
+4.0 BUTTONS & LINKS STYLE
+5.0 TRANSITION
+6.0 PRELOADER
+7.0 BACKGROUND CONTAINER
+8.0 MENU
+9.0 BASIC PAGE-CONTAINER & SECTION STYLE
+10.0 HOME SECTION
+11.0 COUNTDOWN SECTION
+12.0 SUBSCRIBE SECTION
+13.0 ABOUT SECTION
+14.0 PORTFOLIO SECTION
+15.0 CONTACT SECTION
+16.0 STYLE FOR TABLET PORTRAIT 
+--*/
+
+/*-- ========================================= --
+	1.0 BASIC STYLE
+/*-- ========================================= --*/
+
+
+/*-- ========================================= --
+	2.0 TYPOGRAPHY
+/*-- ========================================= --*/ 
+p,
+p.highlighted-desc
+{
+	color:#919191;
+}
+.quote-1{
+	border-top:2px solid white;
+	border-bottom:2px solid white;
+}
+
+
+/*-- ========================================= --
+	3.0 FORMS
+/*-- ========================================= --*/
+.input-container .thin-line,
+.form-row .thin-line
+{
+	background:#ff4077;
+}
+input[type="text"],
+input[type="email"],
+textarea
+{
+	border-bottom:2px solid #919191;
+	color:#919191;
+}
+.subscribe-form-container .email-icon::before,
+.contact-form-container .user-icon::before,
+.contact-form-container .email-icon::before,
+.contact-form-container .note-icon::before
+{
+	color:#919191;
+}
+
+.subscribe-email:focus ~ .email-icon::before,
+.contact-name:focus ~ .user-icon::before,
+.contact-email:focus ~ .email-icon::before,
+.contact-message:focus ~ .note-icon::before
+{
+	color:#ff4077;
+}
+
+.form-error{
+	border-bottom:2px solid #f81430 !important;
+}
+.form-error ~ .email-icon::before,
+.form-error ~ .user-icon::before,
+.form-error ~ .note-icon::before
+{
+	color:#f81430;
+}
+
+label.loading-subscribe, 
+label.loading-contact{
+	color:#919191;
+}
+
+label.subscribe-notif-success, 
+label.contact-notif-success{
+	color:#3ca156;
+}
+label.subscribe-notif-error, 
+label.error,
+label.contact-notif-error{
+	color:#f81430;
+}
+
+
+/*-- ========================================= --
+	4.0 BUTTONS & LINKS STYLE
+/*-- ========================================= --*/
+.button-home::before{
+	background:white;
+}
+
+.button-home .icon,
+.button-circle.button-light,
+.button-circle.button-dark:hover,
+.carousel-next-btn,
+.carousel-prev-btn
+{
+	color:#919191;
+}
+
+.button-home .text,
+.button-circle.button-dark,
+.button-round span.text,
+.button-circle.button-light:hover
+{
+	color:white;
+}
+
+.button-circle.button-light::before{
+	box-shadow: inset 0 0 0 26px white;
+	-webkit-box-shadow: inset 0 0 0 26px white;
+	-moz-box-shadow: inset 0 0 0 26px white;
+	-ms-box-shadow: inset 0 0 0 26px white;
+	-o-box-shadow: inset 0 0 0 26px white;
+}
+.button-circle.button-dark::before{
+	box-shadow: inset 0 0 0 26px #919191;
+	-webkit-box-shadow: inset 0 0 0 26px #919191;
+	-moz-box-shadow: inset 0 0 0 26px #919191;
+	-ms-box-shadow: inset 0 0 0 26px #919191;
+	-o-box-shadow: inset 0 0 0 26px #919191;
+}
+
+.button-round{
+	box-shadow: inset 0 0 0 2px #ff4077;
+	-webkit-box-shadow: inset 0 0 0 2px #ff4077;
+	-moz-box-shadow: inset 0 0 0 2px #ff4077;
+	-ms-box-shadow: inset 0 0 0 2px #ff4077;
+	-o-box-shadow: inset 0 0 0 2px #ff4077;
+}
+.button-round span.icon,
+.button-home:hover .icon,
+.button-home.btn-align-right:hover .text,
+.button-home.btn-align-left:hover .text,
+.carousel-next-btn:hover,
+.carousel-prev-btn:hover
+{
+	color:#ff4077;
+}
+
+.button-round::before{
+	background:#ff4077;
+}
+
+.button-circle.button-light:hover::before{
+	box-shadow: inset 0 0 0 2px white;
+	-webkit-box-shadow: inset 0 0 0 2px white;
+	-moz-box-shadow: inset 0 0 0 2px white;
+	-ms-box-shadow: inset 0 0 0 2px white;
+	-o-box-shadow: inset 0 0 0 2px white;
+}
+.button-circle.button-dark:hover::before{
+	box-shadow: inset 0 0 0 2px #919191;
+	-webkit-box-shadow: inset 0 0 0 2px #919191;
+	-moz-box-shadow: inset 0 0 0 2px #919191;
+	-ms-box-shadow: inset 0 0 0 2px #919191;
+	-o-box-shadow: inset 0 0 0 2px #919191;
+}
+
+
+/*-- ========================================= --
+	5.0 TRANSITION
+/*-- ========================================= --*/
+
+
+/*-- ========================================= --
+	6.0 PRELOADER
+/*-- ========================================= --*/
+.preloader{
+	background:white;
+}
+.preloader .line-scale-pulse-out-rapid div{
+	background:#ff4077;
+}
+
+
+/*-- ========================================= --
+	7.0 BACKGROUND CONTAINER
+/*-- ========================================= --*/
+.bg-container::before{
+	background:rgba(40,40,40,0.7);
+}
+.bg-container.white::before{
+	background:rgba(240,240,240,0.9);
+}
+
+
+/*-- ========================================= --
+	8.0 MENU
+/*-- ========================================= --*/
+.panel-menu-small{
+	background:white;
+}
+.panel-menu-small .icon-container{
+	border-bottom:1px solid #919191;
+}
+.panel-menu-small .link-menu-open,
+.panel-menu-small .text-container,
+.menu-list a.menu,
+.social-media-container a.social-link
+{
+	color:#919191;
+}
+
+.link-menu-open:hover,
+.panel-menu-small:hover .link-menu-open,
+.panel-menu-small:hover .text-container,
+.menu-list a.menu:hover,
+.menu-list a.menu.active
+{
+	color:#ff4077;
+}
+.panel-menu-small:hover .icon-container{
+	border-bottom:1px solid #ff4077;
+}
+
+.panel-menu-big .left-side{
+	background:white;
+}
+.panel-menu-big .right-side::before{
+	    background: rgba(40, 40, 40, 0.8);
+}
+
+.panel-menu-big .menu-quote::before,
+.panel-menu-big .menu-quote::after,
+.panel-menu-big .menu-quote .quote-2,
+.panel-menu-big .menu-quote .quote-2-name,
+.social-media-container a.social-link:hover
+{
+	color:white;
+}
+
+.panel-menu-big .copyright{
+	color:#919191;
+}
+.menu-list a.menu::before,
+.menu-list a.menu::after
+{
+	background:#ff4077;
+}
+.social-media-container a.social-link::before{
+	box-shadow: inset 0 0 0 2px #919191;
+	-webkit-box-shadow: inset 0 0 0 2px #919191;
+	-moz-box-shadow: inset 0 0 0 2px #919191;
+	-ms-box-shadow: inset 0 0 0 2px #919191;
+	-o-box-shadow: inset 0 0 0 2px #919191;
+}
+.social-media-container a.social-link:hover::before{
+	box-shadow: inset 0 0 0 25px #ff4077;
+	-webkit-box-shadow: inset 0 0 0 25px #ff4077;
+	-moz-box-shadow: inset 0 0 0 25px #ff4077;
+	-ms-box-shadow: inset 0 0 0 25px #ff4077;
+	-o-box-shadow: inset 0 0 0 25px #ff4077;
+}
+
+
+/*-- ========================================= --
+	9.0 BASIC PAGE-CONTAINER & SECTION STYLE
+/*-- ========================================= --*/
+section .section-title h2{
+	color:#ff4077;
+}
+section .section-title .icon-container{
+	background:white;
+	color:#ff4077;
+}
+section .section-title .icon-container::before{
+	background:white;
+}
+
+
+/*-- ========================================= --
+	10.0 HOME SECTION
+/*-- ========================================= --*/
+.home-title-container{
+	background:rgba(255,255,255,1);
+}
+.home-title-container .home-title h1{
+	color:#ff4077;
+}
+.home-title-container .home-subtitle{
+	color:#919191;
+}
+
+
+/*-- ========================================= --
+	11.0 COUNTDOWN SECTION
+/*-- ========================================= --*/
+.countdown-section .text-left h4,
+.countdown-section .text-right h4
+{
+	color:white;
+}
+.countdown-container{
+	background:rgba(255,255,255,0.7);
+}
+.countdown-container .digit{
+	color:#ff4077;
+}
+.countdown-container .dash_title{
+	color:rgba(38, 38, 38, 0.7);
+}
+
+
+/*-- ========================================= --
+	12.0 SUBSCRIBE SECTION
+/*-- ========================================= --*/
+
+
+/*-- ========================================= --
+	13.0 ABOUT SECTION
+/*-- ========================================= --*/
+.about-tab-nav li .tab-link i,
+.about-tab-nav li .tab-link span,
+.team .text-container p.job
+{
+	color:#919191;
+}
+.about-tab-nav li .tab-link:hover i,
+.about-tab-nav li .tab-link:hover span,
+.about-tab-nav li.active i,
+.about-tab-nav li.active .tab-link span,
+.team .text-container p.separator,
+.service .job-done,
+.service .job-done i,
+.service:hover .service-desc .icon,
+.service:hover .service-desc .title
+{
+	color:#ff4077;
+}
+.team .photo-container .social-media{
+	background:rgba(255,22,84,0);
+}
+.team .photo-container .social-media a{
+	color:white;
+}
+.team .text-container p.name,
+.team:hover .photo-container .social-media a:hover,
+.service .service-desc .icon,
+.service .service-desc .title
+{
+	color:#919191;
+}
+.team:hover .photo-container{
+	border:4px solid white;
+}
+.team:hover .photo-container .social-media{
+	background:rgba(64,242,255,0.5);
+}
+.service-container .service-bordering{
+	background:white;
+}
+
+
+/*-- ========================================= --
+	14.0 PORTFOLIO SECTION
+/*-- ========================================= --*/
+.portfolio .img-container::before,
+.portfolio .overlay
+{
+	background:rgba(0,0,0,0.25);
+}
+.portfolio .zoom-button{
+	color:#ff4077;
+}
+.portfolio .zoom-button:hover,
+.portfolio .text-container .title,
+.portfolio .text-container .category
+{
+	color:white;
+}
+.portfolio .text-container .category::before{
+	background:white;
+}
+.portfolio:hover .img-container::before,
+.portfolio:hover .overlay
+{
+	background:rgba(255,64,119,0.9);
+}
+
+
+/*-- ========================================= --
+	15.0 CONTACT SECTION
+/*-- ========================================= --*/
+.contact-details p.title{
+	color:#919191;
+}
+.contact-details .email::before,
+.contact-details .email::after
+{
+	background:white;
+}
+
+
+/*-- ===================================================== --*
+	16.0 STYLE FOR TABLET PORTRAIT 
+/*-- ===================================================== --*/
+@media all and (max-width: 991px){
+	.home-section .button-home .icon,
+	.home-section .button-home.btn-align-right .text,
+	.home-section .button-home.btn-align-left .text
+	{
+		color:#919191;
+	}
+}
+@media all and (max-width: 767px){	
+	.panel-menu-small .icon-container,
+	.panel-menu-small:hover .icon-container
+	{
+		border:none;
+	}
+}

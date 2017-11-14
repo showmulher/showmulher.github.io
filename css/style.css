@@ -1,0 +1,2483 @@
+/*-- 
+AUTHOR   : SimplePixel
+URL      : http://themeforest.net/user/SimplePixel
+TEMPLATE : Elito - Coming Soon Template
+VERSION  : 1.0
+
+TABLE OF CONTENTS
+1.0 BASIC STYLE
+2.0 TYPOGRAPHY
+3.0 FORMS
+	3.1 FORMS WHEN FOCUS
+	3.2 FORMS WHEN ERROR
+	3.3 FORMS LABEL STYLE
+4.0 BUTTONS & LINKS STYLE
+	4.1 BUTTON HOME
+	4.2 BUTTON CIRCLE
+	4.3 BUTTON ROUNDED
+	4.4 BUTTONS WHEN HOVER
+	4.5 CAROUSEL BUTTONS
+	4.6 CAROUSEL BUTTONS WHEN HOVER
+5.0 TRANSITION
+6.0 PRELOADER
+7.0 BACKGROUND CONTAINER
+8.0 MENU
+	8.1 PANEL MENU SMALL
+	8.2 PANEL MENU SMALL ON HOVER
+	8.3 PANEL MENU BIG
+	8.4 MENU LIST
+	8.5 MENU LIST ON HOVER
+	8.6 SOCIAL MEDIA LINKS
+	8.7 SOCIAL MEDIA LINKS ON HOVER
+9.0 BASIC PAGE-CONTAINER & SECTION STYLE
+10.0 HOME SECTION
+	10.1 HOME SECTION WHEN VISIBLE
+11.0 COUNTDOWN SECTION
+	11.1 COUNTDOWN SECTION WHEN VISIBLE
+12.0 SUBSCRIBE SECTION
+13.0 ABOUT SECTION
+	13.1 ABOUT TAB-LINK ON HOVER
+	13.2 TEAM LIST STYLE
+	13.3 TEAM LIST ON HOVER
+	13.4 SERVICES LIST STYLE
+	13.5 SERVICES ON HOVER
+14.0 PORTFOLIO SECTION
+	14.1 PORTFOLIO ON HOVER
+15.0 CONTACT SECTION
+16.0 STYLE FOR TABLET LANDSCAPE
+17.0 STYLE FOR TABLET PORTRAIT 
+18.0 STYLE FOR EXTRA SMALL DEVICES
+--*/
+ 
+/*-- ========================================= --
+	1.0 BASIC STYLE
+/*-- ========================================= --*/
+html, body{
+	-webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+	margin:0px;
+	padding:0px;
+	width:100%;
+	height:100%;
+	overflow:hidden;
+	font-family:'Open Sans', sans-serif;
+	position:relative;
+	background:white;
+}
+a{
+	text-decoration:none;
+	outline:none;
+	border:none;
+	background:none;
+}
+.centering-x{
+	position:absolute;
+	display:inline-block;
+	left:50%;
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+.centering-y{
+	position:absolute;
+	display:inline-block;
+	top:50%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+.centering-xy{
+	position:absolute;
+	display:inline-block;
+	top:50%;
+	left:50%;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+.entrance{
+	visibility:hidden;
+}
+
+
+/*-- ========================================= --
+	2.0 TYPOGRAPHY
+/*-- ========================================= --*/ 
+h1, h2, h3{
+	position:relative;
+	font-family:'Lobster', cursive;
+	font-weight:400;
+	margin:0px;
+}
+h1{
+	font-size:100px;
+	text-transform:capitalize;
+	line-height:112px;
+	letter-spacing:0px;
+	font-weight:400;
+}
+h2{
+	font-size:70px;
+	text-transform:capitalize;
+	font-weight:400;
+	line-height:70px;
+	letter-spacing:0px;
+}
+h3{
+	font-size:28px;
+	text-transform:lowercase;
+	line-height:38px;
+	font-weight:400;
+	letter-spacing:2px;
+}
+p{
+	font-family:'Open Sans', sans-serif;
+	font-weight:400;
+	font-size:16px;
+	margin:0px;
+	line-height:28px;
+	letter-spacing:0px;
+}
+p.highlighted-desc{
+	font-weight:300;
+	font-size:20px;
+	line-height:32px;
+	letter-spacing:2px;
+}
+.quote-1{
+	text-transform:uppercase;
+	text-align:center;
+	padding:20px 0px;
+}
+.quote-2{
+	font-weight:700;
+	font-size:36px;
+	line-height:55px;
+	letter-spacing:3px;
+	text-transform:uppercase;
+}
+.quote-2-name{
+	font-family:'Lobster', cursive;
+	font-weight:400;
+	font-size:22px;
+	text-transform:capitalize;
+	letter-spacing:0px;
+}
+
+
+
+
+/*-- ========================================= --
+	3.0 FORMS
+/*-- ========================================= --*/
+::-webkit-input-placeholder{
+	text-align:left;
+}
+:-moz-placeholder{
+	text-align:left;
+}
+::-moz-placeholder{
+	text-align:left;
+}
+:-ms-input-placeholder{
+	text-align:left;
+}
+
+.input-container{
+	display:block;
+	padding:0px;
+}
+.subscribe-form .input-container{
+	overflow:hidden;
+}
+
+.input-container .thin-line,
+.form-row .thin-line
+{
+	position:absolute;
+	display:block;
+	width:0%;
+	height:2px;
+	left:0px;
+	bottom:0px;
+	z-index:2;
+}
+
+input[type="text"],
+input[type="email"],
+textarea
+{
+	position:relative;
+	display:block;
+	float:left;
+	border:none;
+	outline:none;
+	background:none;
+	font-weight:500;
+	font-size:14px;
+	width:100%;
+	overflow:hidden;
+	padding:0px 20px 0px 40px;
+	height:56px;
+	transition:all 0.3s ease;
+	-webkit-transition:all 0.3s ease;
+	-moz-transition:all 0.3s ease;
+	-o-transition:all 0.3s ease;
+	-ms-transition:all 0.3s ease;
+}
+.contact-form-container textarea{
+	padding:17px 20px 0px 40px;
+	height:100px;
+	resize:none;
+}
+
+.subscribe-form-container .email-icon::before,
+.contact-form-container .user-icon::before,
+.contact-form-container .email-icon::before,
+.contact-form-container .note-icon::before
+{
+	content:'\e63b';
+	position:absolute;
+	font-family: 'Pe-icon-7-stroke';
+	display:block;
+	left:0px;
+	top:0px;
+	width:22px;
+	height:50px;
+	text-align:center;
+	line-height:54px;
+	font-size:24px;
+	font-weight: normal;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	opacity:1;
+}
+.contact-form-container .user-icon::before{
+	content:'\e605';
+}
+.contact-form-container .email-icon::before{
+	content:'\e63b';
+}
+.contact-form-container .note-icon::before{
+	content:'\e69d';
+}
+.contact-form-container .form-row{
+	position:relative;
+	display:block;
+	margin-bottom:10px;
+	float:left;
+	width:100%;
+}
+.contact-form-container .submit-button{
+	text-align:center;
+	margin-top:30px;
+}
+
+
+/*-- ================== 3.1 FORMS WHEN FOCUS ====================== --*/
+.subscribe-email:focus ~ .thin-line,
+.contact-form input:focus ~ .thin-line,
+.contact-form textarea:focus ~ .thin-line
+{
+	width:100%;
+}
+
+
+/*-- ================== 3.2 FORMS WHEN ERROR ====================== --*/
+.form-error{
+	border-bottom:inherit;
+}
+.form-error ~ .email-icon::before,
+.form-error ~ .user-icon::before,
+.form-error ~ .note-icon::before
+{
+	color:inherit;
+}
+
+
+/*-- ================== 3.3 FORMS LABEL STYLE ====================== --*/
+label.loading-subscribe, 
+label.subscribe-notif-success, 
+label.subscribe-notif-error, 
+label.error, 
+label.loading-contact, 
+label.contact-notif-success, 
+label.contact-notif-error{
+	position:relative;
+	float:left;
+	width:100%;
+	text-align:center;
+	margin:15px 0px 5px 0px;
+	font-weight:500;
+	font-size:13px;
+	display:none;
+}
+label.contact-notif-error{
+	display:block;
+}
+label.loading-contact, 
+label.contact-notif-success, 
+label.contact-notif-error{
+	text-align:center;
+	margin:0px 0px 10px 0px;
+}
+label.loading-subscribe, 
+label.loading-contact{
+	padding-left:20px;
+}
+label.loading-subscribe:before, 
+label.loading-contact:before{
+	position:absolute;
+	left:50%;
+	margin-left:-45px;
+	transform:translateX(-50%);
+	-webkit-transform:translateX(-50%);
+	font-family:'FontAwesome';
+	content:'\f021';
+	
+	/*-- rotating animation --*/	
+	-webkit-animation: spin 1.5s linear 0s infinite;
+	-moz-animation: spin 1.5s linear 0s infinite; 
+	animation: spin 1.5s linear 0s infinite;
+}
+label.loading-contact:before{
+	display:inline-block;
+	left:auto;
+	margin-left:-22px;
+}
+label.subscribe-notif-error:before, 
+label.error:before, 
+label.contact-notif-error:before{
+	font-family:'FontAwesome';
+	content:'\f00d';
+	margin-right:10px;
+}
+label.subscribe-notif-success:before, 
+label.contact-notif-success:before{
+	font-family:'FontAwesome';
+	content:'\f00c';
+	margin-right:10px;
+}
+
+/*-- ========================================= --
+	4.0 BUTTONS & LINKS STYLE
+/*-- ========================================= --*/
+button{
+	background:none;
+}
+
+/*-- ============= 4.1 BUTTON HOME ============= --*/
+.button-home{
+	position:relative;
+	/*float:left;*/
+	display:inline-block;
+	cursor:pointer;
+	outline:none;
+	margin:0px;
+	overflow:hidden;
+	border:none;
+	width:auto;
+	height:auto;
+}
+.button-home{
+	padding:0px 15px;
+}
+.button-home::before{
+	content:'';
+	position:absolute;
+	display:block;
+	width:60px;
+	height:60px;
+	top:0px;
+	border-radius:60px;
+	-moz-border-radius:60px;
+	-webkit-border-radius:60px;
+	-ms-border-radius:60px;
+	-o-border-radius:60px;
+}
+.button-home .text{
+	font-size:14px;
+}
+.button-home.btn-align-right .text{
+	margin-right:30px;
+}
+.button-home.btn-align-left .text{
+	margin-left:30px;
+}
+.button-home .icon{
+	font-size:30px;
+}
+.button-home .text,
+.button-home .icon
+{
+	position:relative;
+	display:inline-block;
+	line-height:60px;
+}
+
+.button-home.btn-align-right::before{
+	right:0px;
+}
+.button-home.btn-align-left::before{
+	left:0px;
+}
+.button-home.btn-align-right .text,
+.button-home.btn-align-right .icon
+{
+	float:right;
+}
+.button-home.btn-align-left .text,
+.button-home.btn-align-left .icon
+{
+	float:left;
+}
+.button-home .text{
+	font-weight:700;
+	letter-spacing:0px;
+	text-transform:uppercase;
+}
+.button-home.btn-notext .text{
+	opacity:0;
+}
+
+/*-- ============= 4.2 BUTTON CIRCLE ============= --*/
+.button-circle{
+	position:relative;
+	display:inline-block;
+	width:52px;
+	height:52px;
+	border-radius:50%;
+	-moz-border-radius:50%;
+	-webkit-border-radius:50%;
+	-ms-border-radius:50%;
+	-o-border-radius:50%;
+	line-height:46px;
+	text-align:center;
+	font-size:22px;
+	font-weight:400;
+	-webkit-backface-visibility:hidden;
+}
+
+.button-circle::before{
+	position:absolute;
+	content:'';
+	width:100%;
+	height:100%;
+	left:0px;
+	top:0px;
+	border-radius:50%;
+	-moz-border-radius:50%;
+	-webkit-border-radius:50%;
+	-ms-border-radius:50%;
+	-o-border-radius:50%;
+	transform: scale(1, 1);
+	-moz-transform: scale(1, 1);
+	-webkit-transform: scale(1, 1);
+	-ms-transform: scale(1, 1);
+	-o-transform: scale(1, 1);
+	z-index:-1;
+}
+
+/*-- ============= 4.3 BUTTON ROUNDED ============= --*/
+.button-round{
+	outline:none;
+	border:none;
+	position:relative;
+	display:inline-block;
+	height:50px;
+	text-align:center;
+	border-radius:25px;
+	-moz-border-radius:25px;
+	-webkit-border-radius:25px;
+	-ms-border-radius:25px;
+	-o-border-radius:25px;
+	overflow:hidden;
+	background:none;
+	-webkit-backface-visibility:hidden;
+}
+.button-round span.icon{
+	position:absolute;
+	left:0px;
+	top:-100%;
+	width:100%;
+	height:100%;
+	line-height:51px;
+	font-size:30px;
+	z-index:-1;
+}
+.button-round span.text{
+	position:relative;
+	display:block;
+	top:0px;
+	line-height:46px;
+	height:50px;
+	font-size:12px;
+	font-weight:700;
+	text-transform:uppercase;
+	background:none;
+	padding:0px 35px;
+}
+.button-round::before{
+	left:0px;
+	top:0px;
+	content:'';
+	position:absolute;
+	display:block;
+	width:100%;
+	height:100%;
+	z-index:-1;
+}
+
+
+
+/*-- ================== 4.4 BUTTONS WHEN HOVER ====================== --*/
+.button-home:hover{
+	padding:0px 30px;
+}
+.button-home:hover::before{
+	width:100%;
+	border-radius:30px;
+	-moz-border-radius:30px;
+	-webkit-border-radius:30px;
+	-ms-border-radius:30px;
+	-o-border-radius:30px;
+}
+.button-home.btn-align-right:hover .text{
+	margin-right:15px;
+}
+.button-home.btn-align-left:hover .text{
+	margin-left:15px;
+}
+.button-home.btn-notext:hover .text{
+	opacity:1;
+}
+
+.button-circle:hover::before{
+	transform: scale(1.1, 1.1);
+	-moz-transform: scale(1.1, 1.1);
+	-webkit-transform: scale(1.1, 1.1);
+	-ms-transform: scale(1.1, 1.1);
+	-o-transform: scale(1.1, 1.1);
+}
+
+.button-round:hover span.icon{
+	top:0%;
+}
+.button-round:hover span.text,
+.button-round:hover::before
+{
+	top:60px;
+}
+
+/*-- ================== 4.5 CAROUSEL BUTTONS ====================== --*/
+.carousel-next-btn,
+.carousel-prev-btn
+{
+	position:absolute;
+	display:inline-block;
+	font-size:35px;
+	top:50%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+	z-index:2;
+}
+.carousel-prev-btn{
+	left:-30px;
+}
+.carousel-next-btn{
+	right:-30px;
+}
+
+/*-- ================== 4.6 CAROUSEL BUTTONS WHEN HOVER ====================== --*/
+.carousel-next-btn:hover,
+.carousel-prev-btn:hover
+{
+	color:inherit;
+}
+
+
+
+/*-- ========================================= --
+	5.0 TRANSITION
+/*-- ========================================= --*/
+button,
+.link-menu-open,
+.button-home,
+.button-home::before,
+.button-home .text,
+.button-home .icon,
+.about-tab-nav li .tab-link i,
+.about-tab-nav li .tab-link span,
+.team .photo-container,
+.team .photo-container img,
+.team .photo-container .social-media,
+.team .photo-container .social-media a,
+.carousel-next-btn,
+.carousel-prev-btn,
+.button-circle,
+.button-circle::before,
+.service:hover .service-desc,
+.service .service-desc .icon,
+.service .service-desc .title,
+.service .job-done,
+.portfolio .img-container::before,
+.portfolio .img-container img,
+.portfolio .text-container .category,
+.portfolio .text-container .category::before,
+.panel-menu-small,
+.panel-menu-small .icon-container,
+.link-menu-open,
+.panel-menu-small .text-container,
+.menu-list a.menu,
+.menu-list a.menu::before,
+.menu-list a.menu::after,
+.social-media-container a.social-link,
+.social-media-container a.social-link::before
+{
+	transition:all 0.3s ease;
+	-webkit-transition:all 0.3s ease;
+	-moz-transition:all 0.3s ease;
+	-o-transition:all 0.3s ease;
+	-ms-transition:all 0.3s ease;
+}
+
+.service:hover .job-done,
+.service .service-desc
+{
+	transition:all 0.3s ease 300ms;
+	-webkit-transition:all 0.3s ease 300ms;
+	-moz-transition:all 0.3s ease 300ms;
+	-o-transition:all 0.3s ease 300ms;
+	-ms-transition:all 0.3s ease 300ms;
+}
+
+.button-round,
+.button-round span.icon,
+.button-round span.text,
+.button-round::before
+{
+	transition:all 0.3s ease-in;
+	-webkit-transition:all 0.3s ease-in;
+	-moz-transition:all 0.3s ease-in;
+	-o-transition:all 0.3s ease-in;
+	-ms-transition:all 0.3s ease-in;
+}
+
+.button-round:hover,
+.button-round:hover span.icon,
+.button-round:hover span.text,
+.button-round:hover::before
+{
+	transition:all 0.3s ease-out;
+	-webkit-transition:all 0.3s ease-out;
+	-moz-transition:all 0.3s ease-out;
+	-o-transition:all 0.3s ease-out;
+	-ms-transition:all 0.3s ease-out;
+}
+
+.subscribe-form-container .email-icon::before,
+.contact-form-container .user-icon::before,
+.contact-form-container .email-icon::before,
+.contact-form-container .note-icon::before,
+.input-container .thin-line,
+.form-row .thin-line,
+.home-section .home-title-container,
+.home-section .subscribe-link-container,
+.home-section .countdown-link-container,
+.countdown-section .close-button-container,
+.countdown-section .text-left,
+.countdown-section .text-right,
+.countdown-section .countdown-container,
+.home-section,
+.subscribe-section
+{
+	transition:all 0.5s ease;
+	-webkit-transition:all 0.5s ease;
+	-moz-transition:all 0.5s ease;
+	-o-transition:all 0.5s ease;
+	-ms-transition:all 0.5s ease;
+}
+
+.panel-menu-big .close-menu-container,
+.panel-menu-big.is-visible .left-side,
+.panel-menu-big .right-side,
+.bg-container::before,
+.countdown-section,
+.subscribe-section .content-container,
+.subscribe-section .close-button-container,
+.about-section .content-container,
+.portfolio-section .content-container,
+.contact-section .content-container,
+.preloader
+{
+	transition:all 1s ease;
+	-webkit-transition:all 1s ease;
+	-moz-transition:all 1s ease;
+	-o-transition:all 1s ease;
+	-ms-transition:all 1s ease;
+}
+
+.panel-menu-big.is-visible .right-side,
+.panel-menu-big .left-side
+{
+	transition:all 1s ease 300ms;
+	-webkit-transition:all 1s ease 300ms;
+	-moz-transition:all 1s ease 300ms;
+	-o-transition:all 1s ease 300ms;
+	-ms-transition:all 1s ease 300ms;
+}
+
+.panel-menu-big.is-visible{
+	transition:all 0.1s ease;
+	-webkit-transition:all 0.1s ease;
+	-moz-transition:all 0.1s ease;
+	-o-transition:all 0.1s ease;
+	-ms-transition:all 0.1s ease;
+}
+
+.panel-menu-big,
+.panel-menu-big .close-menu-container.is-visible
+{
+	transition:all 1s ease 1000ms;
+	-webkit-transition:all 1s ease 1000ms;
+	-moz-transition:all 1s ease 1000ms;
+	-o-transition:all 1s ease 1000ms;
+	-ms-transition:all 1s ease 1000ms;
+}
+
+
+/*-- ========================================= --
+	6.0 PRELOADER
+/*-- ========================================= --*/
+.preloader{
+	position:fixed;
+	display:block;
+	width:100%;
+	height:100%;
+	left:0px;
+	top:0px;
+	z-index:4;
+	opacity:1;
+	-webkit-transform: scale(1,1);
+	-moz-transform: scale(1,1);
+	-ms-transform: scale(1,1);
+	-o-transform: scale(1,1);
+	transform: scale(1,1);
+}
+.preloader.is-hidden{
+	opacity:0;
+	-webkit-transform: scale(1.5,1.5);
+	-moz-transform: scale(1.5,1.5);
+	-ms-transform: scale(1.5,1.5);
+	-o-transform: scale(1.5,1.5);
+	transform: scale(1.5,1.5);
+}
+.preloader .content-container{
+	position:relative;
+	width:100%;
+	text-align:center;
+	left:0px;
+}
+.preloader .logo{
+	display:inline-block;
+	height:100px;
+	width:auto;
+}
+.preloader .line-scale-pulse-out-rapid{
+	margin-top:50px;
+}
+
+
+/*-- ========================================= --
+	7.0 BACKGROUND CONTAINER
+/*-- ========================================= --*/
+canvas#bg-canvas{
+	position:fixed;
+	display:block;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	z-index:1;
+}
+.bg-container{
+	position:fixed;
+	left:0px;
+	top:0px;
+	width:100%;
+	overflow:hidden;
+	height:100%;
+	z-index:-1;
+}
+.bg-container::before{
+	content:'';
+	position:absolute;
+	width:100%;
+	height:100%;
+	left:0px;
+	top:0px;
+	z-index:1;
+}
+.bg-container .parallax{
+	position:absolute;
+	display:inline-block;
+	min-width:120%;
+	min-height:120%;
+	top:50%;
+	left:50%;
+	-webkit-transform: translate3d(-50%, -50%, 0);
+	-moz-transform: translate3d(-50%, -50%, 0);
+	-ms-transform: translate3d(-50%, -50%, 0);
+	-o-transform: translate3d(-50%, -50%, 0);
+	transform: translate3d(-50%, -50%, 0);
+}
+
+/*-- ========================================= --
+	8.0 MENU
+/*-- ========================================= --*/
+
+/*-- ========== 8.1 PANEL MENU SMALL ============ --*/
+.panel-menu-small{
+	position:absolute;
+	display:block;
+	left:-10px;
+	top:0px;
+	width:90px;
+	height:100%;
+	z-index:2;
+	overflow:hidden;
+	cursor:pointer;
+}
+.panel-menu-small .icon-container{
+	position:relative;
+	display:block;
+	width:100%;
+	height:80px;
+	text-align:center;
+	line-height:82px;
+	padding-left:10px;
+}
+.panel-menu-small .link-menu-open{
+	font-size:35px;
+}
+.panel-menu-small .text-container{
+	position:absolute;
+	display:block;
+	left:-150px;
+	bottom:190px;
+	width:400px;
+	height:80px;
+	line-height:80px;
+	font-size:14px;
+	font-weight:700;
+	letter-spacing:3px;
+	text-transform:uppercase;
+	-webkit-transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	-o-transform: rotate(-90deg);
+	transform: rotate(-90deg);
+}
+
+/*-- ============= 8.2 PANEL MENU SMALL ON HOVER ============= --*/
+.link-menu-open:hover{
+	color:inherit;
+}
+.panel-menu-small:hover{
+	left:0px;
+}
+.panel-menu-small:hover .icon-container{
+	border-bottom:inherit;
+}
+.panel-menu-small:hover .link-menu-open,
+.panel-menu-small:hover .text-container
+{
+	color:inherit;
+}
+
+
+/*-- ================ 8.3 PANEL MENU BIG ================ --*/
+.panel-menu-big{
+	position:absolute;
+	display:block;
+	width:100%;
+	height:100%;
+	left:0px;
+	top:0px;
+	z-index:-2;
+	visibility:hidden;
+}
+.panel-menu-big.is-visible{
+	visibility:visible;
+	z-index:4;
+}
+.panel-menu-big .close-menu-container{
+	position:absolute;
+	left:-25px;
+	z-index:3;
+	opacity:0;
+}
+.panel-menu-big .close-menu-container.is-visible{
+	opacity:1;
+	left:25px;
+}
+.panel-menu-big .left-side,
+.panel-menu-big .right-side
+{
+	position:absolute;
+	display:block;
+	height:100%;
+	opacity:0;
+}
+.panel-menu-big .left-side{
+	left:-50%;
+	z-index:2;
+}
+.panel-menu-big .right-side{
+	background:url(../img/quote_bg.jpg) no-repeat;
+	background-size:cover;
+	left:0px;
+	z-index:1;
+}
+.panel-menu-big .right-side::before{
+	content:'';
+	position:absolute;
+	width:100%;
+	height:100%;
+	left:0px;
+	top:0px;
+}
+.panel-menu-big .left-side.is-visible{
+	left:0px;
+	opacity:1;
+}
+.panel-menu-big .right-side.is-visible{
+	left:50%;
+	opacity:1;
+}
+.panel-menu-big .content-container{
+	width:100%;
+	left:0px;
+	height:auto;
+	text-align:center;
+}
+
+.panel-menu-big .quote-container{
+	position:relative;
+	float:left;
+	width:100%;
+	height:auto;
+}
+.panel-menu-big .quote-container .owl-wrapper-outer{
+	padding:40px 0px;
+}
+.panel-menu-big .menu-quote{
+	position:relative;
+	padding:20px;
+	height:auto;
+}
+.panel-menu-big .menu-quote::before,
+.panel-menu-big .menu-quote::after
+{
+	position:absolute;
+	font-family:'FontAwesome';
+	font-size:25px;
+	left:50%;
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+.panel-menu-big .menu-quote::before{
+	content:'\f10d';
+	top:-40px;
+}
+.panel-menu-big .menu-quote::after{
+	content:'\f10e';
+	bottom:-40px;
+}
+.panel-menu-big .menu-quote .quote-2-name{
+	margin-top:18px;
+}
+
+.panel-menu-big .logo{
+	position:relative;
+	height:55px;
+	width:auto;
+}
+
+.panel-menu-big .copyright{
+	position:absolute;
+	display:block;
+	width:100%;
+	text-align:center;
+	bottom:20px;
+	left:0px;
+	font-size:12px;
+	font-weight:400;
+}
+
+/*-- ================ 8.4 MENU LIST ================ --*/
+.panel-menu-big .menu-list{
+	position:relative;
+	display:block;
+	width:100%;
+	margin-top:69px;
+}
+.menu-list ul{
+	list-style:none;
+	padding:0px;
+	width:100%;
+}
+.menu-list ul li{
+	position:relative;
+	display:block;
+	width:100%;
+}
+.menu-list a.menu{
+	position:relative;
+	display:inline-block;
+	margin-bottom:15px;
+	letter-spacing:3px;
+	font-size:26px;
+	font-weight:700;
+	text-transform:uppercase;
+	-webkit-backface-visibility:hidden;
+}
+.menu-list a.menu::before,
+.menu-list a.menu::after
+{
+	content:'';
+	position:absolute;
+	width:10px;
+	height:10px;
+	border-radius:50%;
+	-moz-border-radius:50%;
+	-webkit-border-radius:50%;
+	-ms-border-radius:50%;
+	-o-border-radius:50%;
+	top:50%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+	opacity:0;
+}
+.menu-list a.menu::before{
+	left:50%;
+}
+.menu-list a.menu::after{
+	right:50%;
+}
+
+/*-- ============= 8.5 MENU LIST ON HOVER ================= --*/
+.menu-list a.menu:hover,
+.menu-list a.menu.active
+{
+	color:inherit;
+}
+.menu-list a.menu:hover::before,
+.menu-list a.menu.active::before
+{
+	left:-25px;
+	opacity:1;
+}
+.menu-list a.menu:hover::after,
+.menu-list a.menu.active::after
+{
+	right:-25px;
+	opacity:1;
+}
+
+/*-- ============= 8.6 SOCIAL MEDIA LINKS ================= --*/
+.social-media-container{
+	margin-top:54px;
+	text-align:center;
+}
+.social-media-container a.social-link{
+	position:relative;
+	display:inline-block;
+	margin:0px 10px 20px 10px;
+	width:50px;
+	height:50px;
+	line-height:48px;
+	font-size:18px;
+	z-index:1;
+}
+.social-media-container a.social-link::before{
+	content:'';
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:100%;
+	height:100%;
+	border-radius:50%;
+	-moz-border-radius:50%;
+	-webkit-border-radius:50%;
+	-ms-border-radius:50%;
+	-o-border-radius:50%;
+	z-index:-1;
+}
+
+/*-- ============= 8.7 SOCIAL MEDIA LINKS ON HOVER ================ --*/
+.social-media-container a.social-link:hover{
+	color:inherit;
+}
+
+
+/*-- ========================================= --
+	9.0 BASIC PAGE-CONTAINER & SECTION STYLE
+/*-- ========================================= --*/
+.page-container{
+	position:absolute;
+	display:block;
+	top:0px;
+	left:80px;
+	height:100%;
+	overflow:hidden;
+	z-index:1;
+}
+section{
+	position:absolute;
+	display:block;
+	left:0px;
+	width:100%;
+	height:auto;
+}
+section .section-title{
+	position:relative;
+	width:100%;
+}
+section .section-title h2{
+	padding-right:20px;
+	margin-top:-15px;
+	text-align:center;
+	-webkit-transform: rotate(-10deg);
+	-moz-transform: rotate(-10deg);
+	-ms-transform: rotate(-10deg);
+	-o-transform: rotate(-10deg);
+	transform: rotate(-10deg);
+}
+section .section-title .icon-container{
+	position:absolute;
+	bottom:-90px;
+	width:60px;
+	height:60px;
+	border-radius:50%;
+	-moz-border-radius:50%;
+	-webkit-border-radius:50%;
+	-ms-border-radius:50%;
+	-o-border-radius:50%;
+	font-size:30px;
+	text-align:center;
+	line-height:64px;
+}
+section .section-title .icon-container::before{
+	content:'';
+	position:absolute;
+	display:block;
+	width:140px;
+	height:2px;
+	top:30px;
+	left:50%;
+	-webkit-transform: translateX(-50%) rotate(-10deg);
+	-moz-transform: translateX(-50%) rotate(-10deg);
+	-ms-transform: translateX(-50%) rotate(-10deg);
+	-o-transform: translateX(-50%) rotate(-10deg);
+	transform: translateX(-50%) rotate(-10deg);
+	z-index:-1;
+}
+
+/*-- ========================================= --
+	10.0 HOME SECTION
+/*-- ========================================= --*/
+.home-section{
+	height:100%;
+	display:block;
+	visibility:hidden;
+	z-index:-2;
+}
+.home-section .content-container{
+	text-align:center;
+}
+.home-title-container{
+	position:relative;
+	display:inline-block;
+	width:350px;
+	height:350px;
+	border-radius:50%;
+	-moz-border-radius:50%;
+	-webkit-border-radius:50%;
+	-ms-border-radius:50%;
+	-o-border-radius:50%;
+	opacity:0;
+	-webkit-transform: scale(0,0);
+	-moz-transform: scale(0,0);
+	-ms-transform: scale(0,0);
+	-o-transform: scale(0,0);
+	transform: scale(0,0);
+}
+.home-title-container .home-title{
+	left:0px;
+	margin-top:-5px;
+	text-align:center;
+	padding-left:2px;
+	width:100%;
+}
+.home-title-container .home-subtitle{
+	font-size:18px;
+	letter-spacing:5px;
+	text-transform:uppercase;
+}
+.subscribe-link-container{
+	width:auto;
+	margin:0px 0px 0px -330px;
+	opacity:0;
+	-webkit-backface-visibility:hidden;
+}
+.countdown-link-container{
+	width:auto;
+	padding-left:1px;
+	margin:0px 0px 0px 335px;
+	opacity:0;
+	-webkit-backface-visibility:hidden;
+}
+
+
+/*-- =============== 10.1 HOME SECTION WHEN VISIBLE ================= --*/
+.home-section.is-visible{
+	visibility:visible;
+	z-index:2;
+}
+.home-section.is-visible .home-title-container{
+	opacity:1;
+	-webkit-transform: scale(1,1);
+	-moz-transform: scale(1,1);
+	-ms-transform: scale(1,1);
+	-o-transform: scale(1,1);
+	transform: scale(1,1);
+}
+.home-section.is-visible .subscribe-link-container{
+	opacity:1;
+	margin:0px 0px 0px -400px;
+}
+.home-section.is-visible .countdown-link-container{
+	opacity:1;
+	margin:0px 0px 0px 405px;
+}
+
+
+/*-- ========================================= --
+	11.0 COUNTDOWN SECTION
+/*-- ========================================= --*/
+.countdown-section{
+	height:100%;
+	display:block;
+	visibility:hidden;
+	text-align:center;
+	z-index:-2;
+}
+.countdown-section .content-container{
+	left:0px;
+}
+.countdown-section .close-button-container{
+	position:absolute;
+	display:block;
+	top:20px;
+	right:-20px;
+	opacity:0;
+	z-index:2;
+}
+.countdown-section .text-left{
+	opacity:0;
+	width:300px;
+	margin:0px 0px 0px -380px;
+}
+.countdown-section .text-right{
+	opacity:0;
+	width:300px;
+	margin:0px 0px 0px 380px;
+}
+.countdown-section .text-left h4,
+.countdown-section .text-right h4
+{
+	font-weight:300;
+	font-size:36px;
+	letter-spacing:5px;
+	text-transform:uppercase;
+	line-height:40px;
+	-webkit-backface-visibility:hidden;
+}
+.countdown-section .text-left h4{
+	text-align:right;
+	margin-right:-5px;	
+}
+.countdown-section .text-right h4{
+	text-align:left;	
+}
+.countdown-container{
+	position:relative;
+	display:inline-block;
+	width:465px;
+	height:465px;
+	border-radius:50%;
+	-moz-border-radius:50%;
+	-webkit-border-radius:50%;
+	-ms-border-radius:50%;
+	-o-border-radius:50%;
+	opacity:0;
+	-webkit-transform: scale(0,0);
+	-moz-transform: scale(0,0);
+	-ms-transform: scale(0,0);
+	-o-transform: scale(0,0);
+	transform: scale(0,0);
+}
+.countdown-container .dash{
+	display:table-cell;
+	text-align:center;
+	vertical-align:middle;
+	width:465px;
+	height:465px;
+}
+.countdown-container .digit{
+	font-weight:700;
+	letter-spacing:0px;
+	display:inline-block;
+	font-size:150px;
+	height:170px;
+	width:auto;
+	overflow:hidden;
+	margin-top:-10px;
+	padding:0px;
+}
+.countdown-container .dash_title{
+	text-transform:none;
+	width:100%;
+	display:block;
+	font-family:'Lobster', cursive;
+	font-size:30px;
+	font-weight:400;
+	letter-spacing:0px;
+	margin:10px 0px 0px 0px;
+}
+
+/*-- ============== 11.1 COUNTDOWN SECTION WHEN VISIBLE ================ --*/
+.countdown-section.is-visible{
+	visibility:visible;
+	z-index:2;
+}
+.countdown-section.is-visible .close-button-container{
+	opacity:1;
+	right:20px;
+}
+.countdown-section.is-visible .text-left{
+	opacity:1;
+	margin:0px 0px 0px -450px;
+}
+.countdown-section.is-visible .text-right{
+	opacity:1;
+	margin:0px 0px 0px 450px;
+}
+.countdown-section.is-visible .countdown-container{
+	opacity:1;
+	-webkit-transform: scale(1,1);
+	-moz-transform: scale(1,1);
+	-ms-transform: scale(1,1);
+	-o-transform: scale(1,1);
+	transform: scale(1,1);
+}
+
+
+/*-- ========================================= --
+	12.0 SUBSCRIBE SECTION
+/*-- ========================================= --*/
+.subscribe-section{
+	height:100%;
+	display:block;
+	visibility:hidden;
+	z-index:-2;
+}
+.subscribe-section.is-visible{
+	visibility:visible;
+	z-index:2;
+}
+.subscribe-section .content-container{
+	opacity:0;
+	left:-40px;
+}
+.subscribe-section.is-visible .content-container{
+	opacity:1;
+	left:0px;
+}
+.subscribe-section .close-button-container{
+	position:absolute;
+	display:block;
+	right:-20px;
+	top:20px;
+	z-index:2;
+	opacity:0;
+}
+.subscribe-section.is-visible .close-button-container{
+	right:20px;
+	opacity:1;
+}
+.subscribe-desc{
+	position:relative;
+	display:block;
+	text-align:center;
+	margin-top:161px;
+}
+.subscribe-section .subscribe-form-container{
+	margin-top:49px;
+}
+.subscribe-button{
+	position:relative;
+	float:left;
+	display:block;
+	width:100%;
+	text-align:center;
+}
+.subscribe-button button{
+	margin-top:29px;
+	float:none;
+	display:inline-block;
+	-webkit-backface-visibility:hidden;
+	backface-visibility:hidden;
+}
+
+/*-- ========================================= --
+	13.0 ABOUT SECTION
+/*-- ========================================= --*/
+.about-section{
+	height:100%;
+	overflow:auto;
+	display:block;
+	visibility:hidden;
+	opacity:0;
+	z-index:-2;
+}
+.about-section.is-visible{
+	visibility:visible;
+	opacity:1;
+	z-index:2;
+}
+.about-section .content-container{
+	opacity:0;
+	left:-40px;
+	padding-bottom:80px;
+}
+.about-section.is-visible .content-container{
+	opacity:1;
+	left:0px;
+}
+.about-section .section-title{
+	margin:80px 0px 160px 0px;
+}
+.about-section .highlighted-desc{
+	margin-top:-3px;
+	text-align:right;
+}
+.about-section .about-tab-nav{
+	position:relative;
+	display:inline-block;
+	width:100%;
+	padding:0px;
+	list-style:none;
+	text-align:center;
+}
+.about-tab-nav li{
+	display:inline-block;
+	min-width:120px;
+	width:auto;
+	margin:0px 20px;
+}
+.about-tab-nav li .tab-link{
+	display:block;
+}
+.about-tab-nav li .tab-link i{
+	display:inline-block;
+	font-size:60px;
+}
+.about-tab-nav li .tab-link span{
+	margin-top:10px;
+	display:block;
+	text-transform:uppercase;
+	font-weight:700;
+	padding-left:2px;
+	letter-spacing:2px;
+	font-size:14px;
+}
+
+/*-- ======================== 13.1 ABOUT TAB-LINK ON HOVER ========================= --*/
+.about-tab-nav li .tab-link:hover i,
+.about-tab-nav li .tab-link:hover span,
+.about-tab-nav li.active i,
+.about-tab-nav li.active .tab-link span
+{
+	color:inherit;
+}
+
+.about-section .tab-content{
+	margin-top:60px;
+}
+.about-section .tab-content .tab-pane{
+	padding:0px;
+}
+#about-desc p{
+	margin-bottom:18px;
+}
+
+/*-- ======================== 13.2 TEAM LIST STYLE ========================= --*/
+.team-container{
+	position:relative;
+	display:block;
+	width:100%;
+}
+.team-container .team{
+	position:relative;
+	text-align:center;
+}
+.team .photo-container{
+	position:relative;
+	display:inline-block;
+	width:160px;
+	height:160px;
+	border-radius:50%;
+	-moz-border-radius:50%;
+	-webkit-border-radius:50%;
+	-ms-border-radius:50%;
+	-o-border-radius:50%;
+	overflow:hidden;
+	border:4px solid transparent;
+}
+.team .photo-container img{
+	position:absolute;
+	display:block;
+	left:0px;
+	top:0px;
+	width:160px;
+	height:160px;
+	z-index:-1;
+	top:50%;
+	left:50%;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+.team .photo-container .social-media{
+	display:table-cell;
+	vertical-align:middle;
+	width:160px;
+	height:160px;
+	text-align:center;
+}
+.team .photo-container .social-media a{
+	display:inline-block;
+	margin:0px 8px;
+	font-size:20px;
+	opacity:0;
+	-webkit-transform: scale(0,0);
+	-moz-transform: scale(0,0);
+	-ms-transform: scale(0,0);
+	-o-transform: scale(0,0);
+	transform: scale(0,0);
+}
+.team .text-container{
+	position:relative;
+	display:block;
+	float:left;
+	width:100%;
+	margin-top:15px;
+}
+.team .text-container p{
+	margin-bottom:-2px;
+}
+.team .text-container p.name{
+	letter-spacing:0px;
+	font-weight:700;
+	font-size:16px;
+	text-transform:uppercase;
+}
+.team .text-container p.separator{
+	font-size:16px;
+	font-weight:300;
+}
+.team .text-container p.job{
+	font-size:14px;
+	font-style:italic;
+	text-transform:lowercase;
+	letter-spacing:3px;
+	margin-top:-4px;
+}
+
+/*-- ======================== 13.3 TEAM LIST ON HOVER ========================= --*/
+.team:hover .photo-container{
+	border:inherit;
+}
+.team:hover .photo-container img{
+	width:200px;
+	height:200px;
+}
+.team:hover .photo-container .social-media{
+	background:inherit;
+}
+.team:hover .photo-container .social-media a{
+	opacity:1;
+	-webkit-transform: scale(1,1);
+	-moz-transform: scale(1,1);
+	-ms-transform: scale(1,1);
+	-o-transform: scale(1,1);
+	transform: scale(1,1);
+}
+.team:hover .photo-container .social-media a:hover{
+	color:inherit;
+}
+
+/*-- ======================== 13.4 SERVICES LIST STYLE ========================= --*/
+.service-container{
+	padding:0px;
+}
+.service-container .service-bordering{
+	position:relative;
+	float:left;
+	display:block;
+	width:100%;
+	height:1px;
+	margin:60px 0px;
+}
+.service-container .service{
+	text-align:left;
+}
+.service .service-desc{
+	position:relative;
+	display:inline-block;
+	top:0px;
+}
+.service .service-desc .icon{
+	position:relative;
+	display:block;
+	font-size:60px;
+	margin-left:-4px;
+}
+.service .service-desc .title{
+	position:relative;
+	margin-top:10px;
+	font-size:16px;
+	text-transform:uppercase;
+	letter-spacing:3px;
+	font-weight:700;
+}
+.service .service-desc .desc{
+	position:relative;
+	margin-top:10px;
+}
+.service .job-done{
+	position:absolute;
+	bottom:-17px;
+	left:10px;
+	padding-left:35px;
+	font-family:'Lobster', cursive;
+	font-weight:400;
+	font-size:16px;
+	opacity:0;
+}
+.service .job-done i{
+	position:absolute;
+	top:-3px;
+	left:6px;
+	display:block;
+	font-size:22px;
+}
+
+/*-- ======================== 13.5 SERVICES ON HOVER ========================= --*/
+.service:hover .service-desc .icon,
+.service:hover .service-desc .title
+{
+	color:inherit;
+}
+
+.service:hover .service-desc{
+	top:-30px;
+}
+.service:hover .job-done{
+	opacity:1;
+	bottom:-7px;
+}
+
+/*-- ========================================= --
+	14.0 PORTFOLIO SECTION
+/*-- ========================================= --*/
+.portfolio-section{
+	height:100%;
+	overflow:auto;
+	display:block;
+	visibility:hidden;
+	opacity:0;
+	z-index:-2;
+}
+.portfolio-section.is-visible{
+	opacity:1;
+	z-index:2;
+	visibility:visible;
+}
+.portfolio-section .content-container{
+	opacity:0;
+	left:-40px;
+}
+.portfolio-section.is-visible .content-container{
+	opacity:1;
+	left:0px;
+}
+.portfolio-section .section-title{
+	margin:80px 0px 160px 0px;
+}
+.portfolio-section .portfolio-desc{
+	position:relative;
+	display:block;
+	text-align:center;
+}
+.portfolio-section .quote-1{
+	margin-top:70px;
+}
+.portfolio-section .portfolio-container{
+	-moz-column-count:3;
+	-webkit-column-count:3;
+	column-count:3;
+	-moz-column-gap:5px;
+	-webkit-column-gap:5px;
+	column-gap:5px;
+	position:relative;
+	display:block;
+	float:left;
+	width:100%;
+	margin-top:80px;
+	padding-bottom:80px;
+}
+.portfolio-container .portfolio{
+	position:relative;
+	display:inline-block;
+	width:100%;
+	-webkit-backface-visibility:hidden;
+}
+.portfolio-container .portfolio.portrait{
+	height:475px;
+}
+.portfolio-container .portfolio.landscape{
+	height:235px;
+}
+.portfolio .img-container{
+	position:relative;
+	float:left;
+	display:block;
+	width:100%;
+	height:100%;
+	overflow:hidden;
+}
+.portfolio .overlay{
+	position:absolute;
+	display:block;
+	width:100%;
+	height:100%;
+	left:0px;
+	top:0px;
+	z-index:1;
+}
+.portfolio .img-container img{
+	position:absolute;
+	display:block;
+	width:120%;
+	height:auto;
+	left:0px;
+	top:50%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+	z-index:1;
+}
+.portfolio .button-container{
+	position:absolute;
+	display:block;
+	z-index:2;
+	width:100%;
+	height:50px;
+	text-align:center;
+	top:50%;
+	margin-top:-25px;
+}
+.portfolio .zoom-button{
+	display:inline-block;
+	font-size:32px;
+	font-weight:300;
+	line-height:50px;
+	opacity:0;
+	transform: scale(0,0);
+	-moz-transform: scale(0,0);
+	-webkit-transform: scale(0,0);
+	-ms-transform: scale(0,0);
+	-o-transform: scale(0,0);
+	z-index:2;
+}
+.portfolio .zoom-button::before{
+	-webkit-backface-visibility:hidden;
+	backface-visibility:hidden;
+}
+.portfolio .zoom-button:hover{
+	color:inherit;
+}
+.portfolio .text-container{
+	position:absolute;
+	display:block;
+	width:100%;
+	padding:0px 15px;
+	left:0px;
+	bottom:15px;
+	z-index:2;
+}
+.portfolio .text-container .title{
+	position:relative;
+	font-size:24px;
+	font-family:'Lobster', cursive;
+}
+.portfolio .text-container .category{
+	position:relative;
+	text-transform:uppercase;
+	font-weight:400;
+	font-size:14px;
+	letter-spacing:3px;
+	line-height:14px;
+	margin-top:5px;
+	padding-left:0px;
+}
+.portfolio .text-container .category::before{
+	content:'';
+	position:absolute;
+	display:block;
+	top:6px;
+	left:0px;
+	height:1px;
+	width:0px;
+}
+
+/*-- ============= 14.1 PORTFOLIO ON HOVER ============= --*/
+.portfolio:hover .img-container::before{
+	background:inherit;
+}
+.portfolio:hover .img-container img{
+	left:-20px;
+}
+.portfolio:hover .zoom-button{
+	opacity:1;
+	transform: scale(1,1);
+	-moz-transform: scale(1,1);
+	-webkit-transform: scale(1,1);
+	-ms-transform: scale(1,1);
+	-o-transform: scale(1,1);
+}
+.portfolio:hover .text-container .category{
+	padding-left:30px;
+}
+.portfolio:hover .text-container .category::before{
+	width:20px;
+}
+
+/*-- ========================================= --
+	15.0 CONTACT SECTION
+/*-- ========================================= --*/
+.contact-section{
+	height:100%;
+	overflow:auto;
+	display:block;
+	visibility:hidden;
+	opacity:0;
+	z-index:-2;
+}
+.contact-section.is-visible{
+	visibility:visible;
+	opacity:1;
+	z-index:2;
+}
+.contact-section .content-container{
+	opacity:0;
+	left:-40px;
+	padding-bottom:80px;
+}
+.contact-section.is-visible .content-container{
+	opacity:1;
+	left:0px;
+}
+.contact-section .section-title{
+	margin:80px 0px 160px 0px;
+}
+.contact-section .contact-details{
+	position:relative;
+}
+.contact-section .contact-desc{
+	margin-top:60px;
+	text-align:center;
+}
+.contact-details p.title{
+	font-weight:700;
+	font-size:18px;
+	letter-spacing:3px;
+	text-transform:uppercase;
+}
+.contact-details p.detail{
+	margin-top:10px;
+}
+.contact-details .location{
+	text-align:left;
+}
+.contact-details .email{
+	text-align:center;
+}
+.contact-details .email::before,
+.contact-details .email::after
+{
+	content:'';
+	position:absolute;
+	width:1px;
+	height:60%;
+	top:50%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+.contact-details .email::before{
+	left:0px;
+}
+.contact-details .email::after{
+	right:0px;
+}
+.contact-details .phone{
+	text-align:right;
+}
+
+.contact-form-container{
+	margin-top:60px;
+}
+
+
+/*-- ===================================================== --*
+	16.0 STYLE FOR TABLET LANDSCAPE 
+/*-- ===================================================== --*/
+@media all and (max-width: 1350px){
+	/*-- =========== HOME SECTION ============== --*/
+	.home-title-container{
+		width:400px;
+		height:400px;
+	}
+	.subscribe-link-container{
+		width:225px;
+		margin:0px 0px 0px -310px;
+	}
+	.countdown-link-container{
+		width:235px;
+		margin:0px 0px 0px 315px;
+	}
+	.home-section.is-visible .subscribe-link-container{
+		margin:0px 0px 0px -350px;
+	}
+	.home-section.is-visible .countdown-link-container{
+		margin:0px 0px 0px 355px;
+	}
+	.home-section .button-home.btn-align-right:hover .text{
+		margin-right:10px;
+	}
+	.home-section .button-home.btn-align-left:hover .text{
+		margin-left:10px;
+	}
+	
+	/*-- ======== COUNTDOWN SECTION ========= --*/
+	.countdown-container{
+		width:400px;
+		height:400px;
+	}
+	.countdown-container .dash{
+		width:400px;
+		height:400px;
+	}
+	.countdown-container .digit{
+		font-size:130px;
+		height:150px;
+	}
+	.countdown-section .text-left h4,
+	.countdown-section .text-right h4
+	{
+		font-size:30px;
+		letter-spacing:3px;
+		line-height:42px;
+	}
+	.countdown-section .text-left{
+		margin:0px 0px 0px -350px;
+	}
+	.countdown-section .text-right{
+		margin:0px 0px 0px 350px;
+	}
+	.countdown-section.is-visible .text-left{
+		margin:0px 0px 0px -390px;
+	}
+	.countdown-section.is-visible .text-right{
+		margin:0px 0px 0px 390px;
+	}
+}
+
+/*-- ===================================================== --*
+	17.0 STYLE FOR TABLET PORTRAIT 
+/*-- ===================================================== --*/
+@media all and (max-width: 991px){
+	/*-- =========== HOME SECTION ============== --*/
+	.countdown-link-container{
+		margin:0px;
+		top:0%;
+		-webkit-transform: translate(-50%, 0%);
+		-moz-transform: translate(-50%, 0%);
+		-ms-transform: translate(-50%, 0%);
+		-o-transform: translate(-50%, 0%);
+		transform: translate(-50%, 0%);
+	}
+	.subscribe-link-container{
+		margin:0px;
+		top:100%;
+		-webkit-transform: translate(-50%, 0%);
+		-moz-transform: translate(-50%, 0%);
+		-ms-transform: translate(-50%, 0%);
+		-o-transform: translate(-50%, 0%);
+		transform: translate(-50%, 0%);
+	}
+	.home-section.is-visible .countdown-link-container{
+		margin:-120px 0px 0px 0px;
+	}
+	.home-section.is-visible .subscribe-link-container{
+		margin:55px 0px 0px 0px;
+	}
+	.home-section .button-home{
+		padding:0px 30px;
+	}
+	.home-section .button-home::before{
+		width:100%;
+		border-radius:30px;
+		-moz-border-radius:30px;
+		-webkit-border-radius:30px;
+		-ms-border-radius:30px;
+		-o-border-radius:30px;
+	}
+	.home-section .button-home.btn-align-right .text{
+		margin:0px 0px 0px 10px;
+		text-align:left;
+	}
+	.home-section .button-home.btn-align-left .text{
+		margin-left:10px;
+	}
+	.home-section .button-home.btn-align-right::before{
+		left:0px;
+	}
+	.home-section .button-home.btn-align-right .text,
+	.home-section .button-home.btn-align-right .icon
+	{
+		float:left;
+	}
+	
+	
+	/*-- =========== COUNTDOWN SECTION ============== --*/
+	.countdown-section .text-left h4,
+	.countdown-section .text-right h4
+	{
+		text-align:center;
+	}
+	.countdown-section .text-left{
+		margin:0px 0px 0px 0px;
+		top:0%;
+		-webkit-transform: translate(-50%, 0%);
+		-moz-transform: translate(-50%, 0%);
+		-ms-transform: translate(-50%, 0%);
+		-o-transform: translate(-50%, 0%);
+		transform: translate(-50%, 0%);
+	}
+	.countdown-section .text-right{
+		margin:0px 0px 0px 0px;
+		top:100%;
+		-webkit-transform: translate(-50%, 0%);
+		-moz-transform: translate(-50%, 0%);
+		-ms-transform: translate(-50%, 0%);
+		-o-transform: translate(-50%, 0%);
+		transform: translate(-50%, 0%);
+	}
+	.countdown-section.is-visible .text-left{
+		margin:-135px 0px 0px 0px;
+	}
+	.countdown-section.is-visible .text-right{
+		margin:25px 0px 0px 0px;
+	}
+	
+	/*-- =========== ABOUT SECTION ============== --*/
+	#about-desc p{
+		text-align:center;
+	}
+	.service-container .service-bordering{
+		display:none;
+	}
+	.service-container .service{
+		margin-bottom:60px;
+	}
+	
+	/*-- =========== PORTFOLIO SECTION ============== --*/
+	.portfolio-section p.portfolio-desc{
+		text-align:center;
+	}
+	.portfolio-section .content-container{
+		padding:0px 45px;
+	}
+	.portfolio-section p.portfolio-desc{
+		padding:0px;
+	}
+	.portfolio-section .portfolio-container{
+		-moz-column-count:2;
+		-webkit-column-count:2;
+		column-count:2;
+	}
+	
+	/*-- =========== CONTACT SECTION ============== --*/
+	.contact-details .location,
+	.contact-details .email
+	{
+		text-align:center;
+		margin-bottom:20px;
+	}
+	.contact-details .phone{
+		text-align:center;
+	}
+	.contact-details .email{
+		padding:20px 0px;
+		border-top:1px solid white;
+		border-bottom:1px solid white;
+	}
+	.contact-details .email::before,
+	.contact-details .email::after
+	{
+		display:none;
+	}
+}
+
+
+/*-- ===================================================== --*
+	18.0 STYLE FOR EXTRA SMALL DEVICES 
+/*-- ===================================================== --*/
+@media all and (max-width: 767px){	
+	h1{
+		font-size:70px;
+		line-height:82px;
+	}
+	h2{
+		font-size:60px;
+		line-height:60px;
+	}
+	section .section-title .icon-container{
+		bottom:-85px;
+	}
+	
+	/*-- ============ MENU ============== --*/
+	.panel-menu-small{
+		left:0px;
+		top:0px;
+		width:100%;
+		height:50px;
+	}
+	.panel-menu-small .icon-container{
+		height:50px;
+		border:none;
+		line-height:54px;
+		padding-left:0px;
+	}
+	.panel-menu-small .link-menu-open{
+		font-size:30px;
+	}
+	.panel-menu-small:hover{
+		left:0px;
+	}
+	.panel-menu-small:hover .icon-container{
+		border:none;
+	}
+	.panel-menu-small .text-container{
+		display:none;
+	}
+	
+	.panel-menu-big{
+		overflow:auto;
+	}
+	.panel-menu-big .left-side,
+	.panel-menu-big .right-side
+	{
+		position:relative;
+		display:block;
+		float:left;
+		height:auto;
+		padding:50px 0px;
+	}
+	.panel-menu-big .left-side{
+		left:0%;
+		top:-50%;
+	}
+	.panel-menu-big .right-side{
+		top:0%;
+	}
+	.panel-menu-big .left-side.is-visible{
+		top:0px;
+	}
+	.panel-menu-big .right-side.is-visible{
+		left:0%;
+	}
+	.panel-menu-big .content-container{
+		position:relative;
+		float:left;
+		left:0px;
+		-webkit-transform: translateY(0%);
+		-moz-transform: translateY(0%);
+		-ms-transform: translateY(0%);
+		-o-transform: translateY(0%);
+		transform: translateY(0%);
+	}
+	.panel-menu-big .left-side .content-container{
+		margin-top:70px;
+	}
+	.panel-menu-big .close-menu-container{
+		position:absolute;
+		left:50%;
+		top:0px;
+		-webkit-transform: translateX(-50%);
+		-moz-transform: translateX(-50%);
+		-ms-transform: translateX(-50%);
+		-o-transform: translateX(-50%);
+		transform: translateX(-50%);
+	}
+	.panel-menu-big .close-menu-container.is-visible{
+		top:30px;
+		left:50%;
+	}
+	.panel-menu-big .copyright{
+		position:relative;
+		float:left;
+		bottom:0px;
+		left:0px;
+		margin-top:10px;
+	}
+	
+	
+	
+	/*-- ============ PRELOADER ============== --*/
+	.preloader .logo{
+		height:70px;
+	}
+	.preloader .line-scale-pulse-out-rapid{
+		margin-top:30px;
+	}
+	
+	
+	/*-- =========== HOME SECTION ============== --*/
+	.home-section{
+		height:100%;
+		overflow:auto;
+	}
+	.home-title-container{
+		margin-top:100px;
+		width:280px;
+		height:280px;
+	}
+	.home-title-container .home-subtitle{
+		font-size:16px;
+		letter-spacing:3px;
+	}
+	.home-section .content-container{
+		position:relative;
+		top:0px;
+		-webkit-transform: translateY(0%);
+		-moz-transform: translateY(0%);
+		-ms-transform: translateY(0%);
+		-o-transform: translateY(0%);
+		transform: translateY(0%);
+		height:530px;
+		margin-top:130px;
+	}
+	.home-section .countdown-link-container{
+		margin:40px 0px 0px 0px;
+	}
+	.home-section .subscribe-link-container{
+		top:380px;
+		margin:0px 0px 0px 0px;
+	}
+	.home-section.is-visible .countdown-link-container{
+		margin:0px 0px 0px 0px;
+	}
+	.home-section.is-visible .subscribe-link-container{
+		top:420px;
+		margin:0px 0px 0px 0px;
+	}
+	
+	/*-- =========== COUNTDOWN SECTION ============== --*/
+	.countdown-section{
+		height:100%;
+		overflow:auto;
+	}
+	.countdown-container{
+		margin-top:120px;
+		width:280px;
+		height:280px;
+	}
+	.countdown-section .content-container{
+		position:relative;
+		top:0px;
+		-webkit-transform: translateY(0%);
+		-moz-transform: translateY(0%);
+		-ms-transform: translateY(0%);
+		-o-transform: translateY(0%);
+		transform: translateY(0%);
+		height:550px;
+		margin-top:230px;
+	}
+	.countdown-section .text-left{
+		margin:40px 0px 0px 0px;
+	} 
+	.countdown-section .text-right{
+		top:380px;
+		margin:0px 0px 0px 0px;
+	}
+	.countdown-section.is-visible .text-left{
+		margin:0px 0px 0px 0px;
+	}
+	.countdown-section.is-visible .text-right{
+		top:417px;
+		margin:0px 0px 0px 0px;
+	}
+	.countdown-container .dash{
+		width:280px;
+		height:280px;
+	}
+	.countdown-container .digit{
+		font-size:90px;
+		height:110px;
+	}
+	.countdown-container .dash_title{
+		font-size:24px;
+		margin:0px 0px 0px 0px;
+	}
+	.countdown-section .close-button-container{
+		top:90px;
+		right:inherit;
+		left:50%;
+		-webkit-transform: translateX(-50%);
+		-moz-transform: translateX(-50%);
+		-ms-transform: translateX(-50%);
+		-o-transform: translateX(-50%);
+		transform: translateX(-50%);
+	}
+	.countdown-section.is-visible .close-button-container{
+		right:inherit;
+		top:130px;
+	}
+	
+	/*-- =========== SUBSCRIBE SECTION ============== --*/
+	.subscribe-section{
+		height:100%;
+		overflow-x:hidden;
+		overflow-y:auto;
+	}
+	.subscribe-section .content-container{
+		position:relative;
+		float:left;
+		margin-top:205px;
+		padding:0px 0px 80px 0px;
+		top:0px;
+		-webkit-transform: translateY(0%);
+		-moz-transform: translateY(0%);
+		-ms-transform: translateY(0%);
+		-o-transform: translateY(0%);
+		transform: translateY(0%);
+	}
+	.subscribe-section .close-button-container{
+		right:inherit;
+		top:0px;
+		left:50%;
+		-webkit-transform: translateX(-50%);
+		-moz-transform: translateX(-50%);
+		-ms-transform: translateX(-50%);
+		-o-transform: translateX(-50%);
+		transform: translateX(-50%);
+	}
+	.subscribe-section.is-visible .close-button-container{
+		right:inherit;
+		top:100px;
+	}
+	
+	/*-- =========== ABOUT SECTION ============== --*/
+	.about-section,
+	.portfolio-section,
+	.contact-section
+	{
+		overflow-x:hidden;
+	}
+	.about-section .section-title,
+	.portfolio-section .section-title,
+	.contact-section .section-title
+	{
+		margin-top:130px;
+	}
+	.about-section .content-container,
+	.contact-section .content-container,
+	.about-section .tab-content
+	{
+		padding:0px 0px 20px 0px;
+	}
+	.about-section .about-tab-nav li{
+		margin:0px 15px;
+	}
+	.carousel-prev-btn{
+		left:10px;
+	}
+	.carousel-next-btn{
+		right:10px;
+	}
+	
+	/*-- =========== PORTFOLIO SECTION ============== --*/
+	.portfolio-section .content-container{
+		padding:0px 15px;
+	}
+	.portfolio-section .portfolio-container{
+		-moz-column-count:1;
+		-webkit-column-count:1;
+		column-count:1;
+	}
+	
+	/*-- =========== CONTACT SECTION =========== --*/
+	.contact-section .contact-form-container{
+		position:relative;
+		display:block;
+		float:left;
+		padding:0px 0px 50px 0px;
+	}
+}
+@media all and (max-width: 479px){	
+	.about-section .about-tab-nav li{
+		display:block;
+		margin:0px 20px 35px 20px;
+	}
+	.about-section .about-tab-nav li:last-child{
+		margin-bottom:0px;
+	}
+}
